@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Жазина & Мирлан — 10.10.2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--ivory:#f7f3ed;
+--paper:#fcfaf6;
+--ink:#342d28;
+--muted:#756c63;
+--gold:#ad9271;
+--line:rgba(70,58,48,.18);
+--serif:"Cormorant Garamond",Georgia,serif;
+--sans:"Montserrat",Arial,sans-serif;
+--script:"Parisienne",cursive;
+}
+
+*{box-sizing:border-box}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+background:var(--ivory);
+color:var(--ink);
+font-family:var(--sans);
+font-weight:300;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+body.locked{
+overflow:hidden;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+button,input{
+font:inherit;
+}
+
+button{
+cursor:pointer;
+}
+
+.loader{
+position:fixed;
+inset:0;
+background:var(--ivory);
+z-index:9999;
+display:flex;
+align-items:center;
+justify-content:center;
+transition:.9s;
+}
+
+.loader.hide{
+opacity:0;
+visibility:hidden;
+}
+
+.loader-inner{
+text-align:center;
+}
+
+.loader-names{
+font-family:var(--script);
+font-size:58px;
+}
+
+.loader-line{
+width:90px;
+height:1px;
+background:var(--gold);
+margin:15px auto;
+}
+
+.loader-date{
+font-size:10px;
+letter-spacing:.35em;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+.music{
+position:fixed;
+right:18px;
+top:18px;
+z-index:1000;
+width:48px;
+height:48px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.5);
+background:rgba(35,29,25,.45);
+backdrop-filter:blur(10px);
+color:#fff;
+}
+
+.hero{
+min-height:100svh;
+position:relative;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+overflow:hidden;
+color:white;
+}
+
+.hero:before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+180deg,
+rgba(20,16,13,.08),
+rgba(20,16,13,.2) 45%,
+rgba(20,16,13,.8)
+),
+url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90")
+center/cover;
+animation:zoom 12s ease-out forwards;
+}
+
+@keyframes zoom{
+from{transform:scale(1.08)}
+to{transform:scale(1.02)}
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+width:92%;
+padding-bottom:13vh;
+}
+
+.eyebrow{
+font-size:10px;
+letter-spacing:.4em;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.hero-names{
+font-family:var(--script);
+font-size:clamp(75px,15vw,165px);
+line-height:.85;
+}
+
+.hero-names span{
+display:block;
+font-family:var(--serif);
+font-size:.42em;
+line-height:1.3;
+}
+
+.hero-sub{
+font-family:var(--serif);
+font-size:clamp(20px,3vw,30px);
+margin-top:25px;
+}
+
+.hero-date{
+margin-top:25px;
+font-size:10px;
+letter-spacing:.35em;
+text-transform:uppercase;
+}
+
+.scroll{
+position:absolute;
+z-index:3;
+bottom:25px;
+left:50%;
+transform:translateX(-50%);
+font-size:8px;
+letter-spacing:.3em;
+text-transform:uppercase;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:8px;
+}
+
+.scroll i{
+height:42px;
+width:1px;
+background:white;
+animation:line 1.7s infinite;
+}
+
+@keyframes line{
+0%,100%{transform:scaleY(.3)}
+50%{transform:scaleY(1)}
+}
+
+.section{
+padding:110px 20px;
+}
+
+.wrap{
+max-width:1080px;
+margin:auto;
+}
+
+.center{
+text-align:center;
+}
+
+.kicker{
+font-size:9px;
+letter-spacing:.4em;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:14px;
+font-weight:500;
+}
+
+h2{
+font-family:var(--serif);
+font-size:clamp(50px,7vw,80px);
+font-weight:400;
+line-height:.95;
+margin:0 0 20px;
+}
+
+.ornament{
+color:var(--gold);
+font-size:22px;
+margin:15px 0 28px;
+}
+
+.intro{
+max-width:650px;
+margin:auto;
+font-size:14px;
+line-height:2;
+color:var(--muted);
+}
+
+.letter-section{
+background:var(--paper);
+}
+
+.letter{
+max-width:820px;
+margin:auto;
+padding:70px 35px;
+text-align:center;
+position:relative;
+border:1px solid var(--line);
+background:var(--paper);
+box-shadow:0 25px 70px rgba(50,40,30,.1);
+}
+
+.letter:before,
+.letter:after{
+content:"";
+position:absolute;
+width:45px;
+height:45px;
+border-color:var(--gold);
+opacity:.5;
+}
+
+.letter:before{
+left:18px;
+top:18px;
+border-top:1px solid;
+border-left:1px solid;
+}
+
+.letter:after{
+right:18px;
+bottom:18px;
+border-right:1px solid;
+border-bottom:1px solid;
+}
+
+.letter h3{
+font-family:var(--serif);
+font-size:40px;
+font-weight:400;
+margin:0 0 20px;
+}
+
+.letter p{
+font-family:var(--serif);
+font-size:23px;
+line-height:1.65;
+color:#61584f;
+max-width:650px;
+margin:auto;
+}
+
+.signature{
+font-family:var(--script);
+font-size:46px;
+margin-top:28px;
+}
+
+.story{
+background:var(--ivory);
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.story-photo{
+min-height:650px;
+background:
+linear-gradient(rgba(0,0,0,.03),rgba(0,0,0,.2)),
+url("https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=90")
+center/cover;
+box-shadow:0 25px 70px rgba(50,40,30,.13);
+position:relative;
+}
+
+.story-photo:after{
+content:"";
+position:absolute;
+inset:18px;
+border:1px solid rgba(255,255,255,.6);
+}
+
+.story-copy p{
+font-size:14px;
+line-height:2;
+color:var(--muted);
+}
+
+.story-quote{
+font-family:var(--serif);
+font-size:36px;
+line-height:1.2;
+margin:30px 0;
+}
+
+.script{
+font-family:var(--script);
+}
+
+.details{
+background:#eee8df;
+}
+
+.details-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:55px;
+}
+
+.detail-card{
+min-height:220px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:rgba(255,255,255,.5);
+border:1px solid rgba(60,50,40,.1);
+transition:.4s;
+}
+
+.detail-card:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 45px rgba(50,40,30,.08);
+}
+
+.detail-icon{
+width:44px;
+height:44px;
+border:1px solid var(--gold);
+border-radius:50%;
+display:grid;
+place-items:center;
+color:var(--gold);
+margin-bottom:16px;
+}
+
+.detail-label{
+font-size:9px;
+letter-spacing:.25em;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+.detail-value{
+font-family:var(--serif);
+font-size:30px;
+margin-top:5px;
+}
+
+.detail-small{
+font-size:11px;
+color:var(--muted);
+}
+
+.venue{
+min-height:600px;
+position:relative;
+display:grid;
+place-items:center;
+color:white;
+overflow:hidden;
+}
+
+.venue:before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+90deg,
+rgba(20,17,14,.75),
+rgba(20,17,14,.2)
+),
+url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=90")
+center/cover;
+}
+
+.venue-card{
+position:relative;
+z-index:2;
+width:min(700px,90%);
+padding:70px 25px;
+text-align:center;
+border:1px solid rgba(255,255,255,.4);
+}
+
+.venue-card h2{
+font-size:75px;
+}
+
+.venue-card p{
+font-family:var(--serif);
+font-size:26px;
+margin:8px 0;
+}
+
+.address{
+font-family:var(--sans)!important;
+font-size:10px!important;
+letter-spacing:.25em;
+text-transform:uppercase;
+opacity:.8;
+margin-top:25px!important;
+}
+
+.map-btn{
+display:inline-block;
+margin-top:28px;
+padding:13px 22px;
+border:1px solid rgba(255,255,255,.6);
+font-size:9px;
+letter-spacing:.2em;
+text-transform:uppercase;
+transition:.3s;
+}
+
+.map-btn:hover{
+background:white;
+color:var(--ink);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1fr .8fr 1fr;
+grid-auto-rows:250px;
+gap:15px;
+margin-top:55px;
+}
+
+.g{
+overflow:hidden;
+}
+
+.g img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:1s;
+}
+
+.g:hover img{
+transform:scale(1.06);
+}
+
+.g1,.g3{
+grid-row:span 2;
+}
+
+.g5{
+grid-column:2;
+}
+
+.countdown{
+min-height:520px;
+position:relative;
+display:grid;
+place-items:center;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.countdown:before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(30,24,20,.6),rgba(30,24,20,.68)),
+url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=90")
+center/cover;
+}
+
+.count-content{
+position:relative;
+z-index:2;
+}
+
+.count-grid{
+display:flex;
+justify-content:center;
+gap:clamp(18px,5vw,60px);
+margin-top:45px;
+}
+
+.count-num{
+font-family:var(--serif);
+font-size:clamp(45px,7vw,72px);
+line-height:1;
+}
+
+.count-label{
+font-size:8px;
+letter-spacing:.25em;
+text-transform:uppercase;
+opacity:.7;
+margin-top:10px;
+}
+
+.count-note{
+font-family:var(--serif);
+font-size:21px;
+margin-top:35px;
+}
+
+.dress{
+background:var(--ivory);
+}
+
+.palette{
+display:flex;
+justify-content:center;
+gap:15px;
+margin:40px 0 25px;
+}
+
+.swatch{
+width:65px;
+height:65px;
+border-radius:50%;
+border:7px solid var(--ivory);
+box-shadow:0 0 0 1px rgba(50,40,30,.15);
+}
+
+.s1{background:#f2eee7}
+.s2{background:#d9c9b5}
+.s3{background:#9da896}
+.s4{background:#d1b28d}
+
+.palette-names{
+display:flex;
+justify-content:center;
+gap:28px;
+font-size:8px;
+letter-spacing:.15em;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+.dress-text{
+font-family:var(--serif);
+font-size:23px;
+color:var(--muted);
+margin-top:25px;
+}
+
+.rsvp{
+background:#ece5dc;
+}
+
+.rsvp-box{
+max-width:760px;
+margin:45px auto 0;
+padding:55px 45px;
+background:var(--paper);
+border:1px solid var(--line);
+box-shadow:0 25px 70px rgba(50,40,30,.1);
+}
+
+.field{
+margin-bottom:22px;
+}
+
+label{
+font-size:9px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--muted);
+}
+
+input{
+width:100%;
+border:0;
+border-bottom:1px solid var(--line);
+background:transparent;
+padding:12px 2px;
+outline:none;
+}
+
+input:focus{
+border-color:var(--gold);
+}
+
+.choices{
+display:flex;
+gap:12px;
+margin-top:10px;
+}
+
+.choice{
+flex:1;
+position:relative;
+}
+
+.choice input{
+position:absolute;
+opacity:0;
+}
+
+.choice span{
+display:block;
+text-align:center;
+border:1px solid var(--line);
+padding:13px 8px;
+font-size:10px;
+transition:.3s;
+}
+
+.choice input:checked+span{
+border-color:var(--gold);
+background:#f1e9df;
+}
+
+.submit{
+width:100%;
+border:1px solid var(--ink);
+background:var(--ink);
+color:white;
+padding:15px;
+font-size:9px;
+letter-spacing:.2em;
+text-transform:uppercase;
+margin-top:10px;
+}
+
+.success{
+display:none;
+text-align:center;
+font-family:var(--serif);
+font-size:25px;
+}
+
+.success.show{
+display:block;
+}
+
+footer{
+background:#27221e;
+color:white;
+text-align:center;
+padding:80px 20px 45px;
+}
+
+.footer-names{
+font-family:var(--script);
+font-size:68px;
+}
+
+.footer-date{
+font-size:9px;
+letter-spacing:.3em;
+text-transform:uppercase;
+opacity:.6;
+margin-top:10px;
+}
+
+.thanks{
+font-family:var(--serif);
+font-size:23px;
+opacity:.85;
+max-width:500px;
+margin:30px auto 50px;
+}
+
+.top{
+width:42px;
+height:42px;
+border:1px solid rgba(255,255,255,.3);
+border-radius:50%;
+display:inline-grid;
+place-items:center;
+}
+
+.reveal{
+opacity:0;
+transform:translateY(25px);
+transition:opacity .9s,transform .9s;
+}
+
+.reveal.visible{
+opacity:1;
+transform:none;
+}
+
+@media(max-width:800px){
+
+.section{
+padding:80px 18px;
+}
+
+.story-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.story-photo{
+min-height:500px;
+}
+
+.details-grid{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr 1fr;
+grid-auto-rows:200px;
+gap:10px;
+}
+
+.g1,.g3{
+grid-row:span 2;
+}
+
+.g5{
+grid-column:1/-1;
+}
+
+.rsvp-box{
+padding:40px 22px;
+}
+
+.choices{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:520px){
+
+.hero-names{
+font-size:85px;
+}
+
+.letter{
+padding:55px 20px;
+}
+
+.letter h3{
+font-size:34px;
+}
+
+.letter p{
+font-size:20px;
+}
+
+.gallery{
+grid-auto-rows:165px;
+}
+
+.count-grid{
+gap:12px;
+}
+
+.count-num{
+font-size:42px;
+}
+
+.palette-names{
+gap:14px;
+font-size:7px;
+}
+
+.swatch{
+width:55px;
+height:55px;
+}
+
+.footer-names{
+font-size:58px;
+}
+
+}
+</style>
+</head>
+
+<body class="locked">
+
+<div class="loader" id="loader">
+<div class="loader-inner">
+<div class="loader-names">Жазина & Мирлан</div>
+<div class="loader-line"></div>
+<div class="loader-date">10 · 10 · 2026</div>
+</div>
+</div>
+
+<button class="music" id="musicBtn">♫</button>
+
+<audio id="music" loop>
+<source src="" type="audio/mpeg">
+</audio>
+
+<header class="hero" id="top">
+
+<div class="hero-content reveal">
+
+<div class="eyebrow">
+Wedding Invitation · 10.10.2026
+</div>
+
+<div class="hero-names">
+Жазина
+<span>&amp;</span>
+Мирлан
+</div>
+
+<div class="hero-sub">
+Биздин сүйүү баяныбыздын жаңы барагы
+</div>
+
+<div class="hero-date">
+Бишкек · Ала-Тоо · 17:00
+</div>
+
+</div>
+
+<a href="#invitation" class="scroll">
+SCROLL
+<i></i>
+</a>
+
+</header>
+
+<section class="section letter-section" id="invitation">
+
+<div class="letter reveal">
+
+<div class="kicker">
+Сизге арналган чакыруу
+</div>
+
+<h3>
+Урматтуу туугандар, достор жана жакындарыбыз!
+</h3>
+
+<div class="ornament">
+— ✦ —
+</div>
+
+<p>
+Сиздерди биздин кубанычтуу күнүбүзгө чакырабыз.
+Биздин эң бактылуу күндөрүбүздүн биринде
+сиздердин да жаныбызда болушуңуздарды каалайбыз.
+</p>
+
+<div class="signature">
+Жазина &amp; Мирлан
+</div>
+
+</div>
+
+</section>
+
+<section class="section story">
+
+<div class="wrap story-grid">
+
+<div class="story-photo reveal"></div>
+
+<div class="story-copy reveal">
+
+<div class="kicker">
+Our Story
+</div>
+
+<h2>
+Эки жүрөк.
+<br>
+<span class="script">Бир тагдыр.</span>
+</h2>
+
+<div class="ornament">
+✦
+</div>
+
+<div class="story-quote">
+«Кээ бир жолугушуулар кокустук эмес.»
+</div>
+
+<p>
+Бул күн — эки адамдын гана эмес,
+эки жүрөктүн бир багытты тандаган
+өзгөчө күнү.
+</p>
+
+<p>
+Ошол жаңы баракты сиздер менен
+бирге ачкыбыз келет.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section details">
+
+<div class="wrap">
+
+<div class="center reveal">
+
+<div class="kicker">
+Save The Date
+</div>
+
+<h2>
+Биздин күн
+</h2>
+
+<div class="ornament">
+— ✦ —
+</div>
+
+</div>
+
+<div class="details-grid">
+
+<div class="detail-card reveal">
+
+<div class="detail-icon">
+♡
+</div>
+
+<div class="detail-label">
+Тойдун күнү
+</div>
+
+<div class="detail-value">
+10.10.2026
+</div>
+
+<div class="detail-small">
+Ишемби
+</div>
+
+</div>
+
+<div class="detail-card reveal">
+
+<div class="detail-icon">
+◷
+</div>
+
+<div class="detail-label">
+Башталышы
+</div>
+
+<div class="detail-value">
+17:00
+</div>
+
+<div class="detail-small">
+Конокторду күтөбүз
+</div>
+
+</div>
+
+<div class="detail-card reveal">
+
+<div class="detail-icon">
+⌖
+</div>
+
+<div class="detail-label">
+Өтчү жери
+</div>
+
+<div class="detail-value">
+Ала-Тоо
+</div>
+
+<div class="detail-small">
+Кафе
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="venue">
+
+<div class="venue-card reveal">
+
+<div class="kicker" style="color:#dfc7a8">
+The Place
+</div>
+
+<h2>
+Ала-Тоо
+</h2>
+
+<p>
+Биздин майрамдын дареги
+</p>
+
+<p class="address">
+«Биздин сүйүү 22»
+</p>
+
+<a
+class="map-btn"
+href="https://www.google.com/maps/search/?api=1&query=Биздин+сүйүү+22"
+target="_blank"
+rel="noopener">
+📍 Картадан көрүү
+</a>
+
+</div>
+
+</section>
+
+<section class="section moments">
+
+<div class="wrap">
+
+<div class="center reveal">
+
+<div class="kicker">
+Moments
+</div>
+
+<h2>
+Биздин көз ирмемдер
+</h2>
+
+<div class="ornament">
+— ✦ —
+</div>
+
+<p class="intro">
+Сүйүү бир гана сөз эмес.
+Ал көз карашта, кол кармашууда
+жана чогуу күлгөн көз ирмемдерде жашайт.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="g g1 reveal">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=90">
+</div>
+
+<div class="g g2 reveal">
+<img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=90">
+</div>
+
+<div class="g g3 reveal">
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=90">
+</div>
+
+<div class="g g4 reveal">
+<img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=800&q=90">
+</div>
+
+<div class="g g5 reveal">
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=90">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="countdown">
+
+<div class="count-content reveal">
+
+<div class="kicker" style="color:#dfc7a8">
+Until Our Day
+</div>
+
+<h2>
+Биздин күнгө чейин
+</h2>
+
+<div class="count-grid">
+
+<div>
+<div class="count-num" id="days">00</div>
+<div class="count-label">күн</div>
+</div>
+
+<div>
+<div class="count-num" id="hours">00</div>
+<div class="count-label">саат</div>
+</div>
+
+<div>
+<div class="count-num" id="minutes">00</div>
+<div class="count-label">мүнөт</div>
+</div>
+
+<div>
+<div class="count-num" id="seconds">00</div>
+<div class="count-label">секунд</div>
+</div>
+
+</div>
+
+<div class="count-note">
+10 октябрь 2026 · 17:00
+</div>
+
+</div>
+
+</section>
+
+<section class="section dress">
+
+<div class="wrap center reveal">
+
+<div class="kicker">
+A Little Note
+</div>
+
+<h2>
+Dress Code
+</h2>
+
+<div class="ornament">
+✦
+</div>
+
+<p class="intro">
+Бул өзгөчө күнүбүздө сиздин жарашыктуу
+образыңыз майрамыбыздын кооздугун толуктайт.
+</p>
+
+<div class="palette">
+
+<div class="swatch s1"></div>
+<div class="swatch s2"></div>
+<div class="swatch s3"></div>
+<div class="swatch s4"></div>
+
+</div>
+
+<div class="palette-names">
+<span>Ivory</span>
+<span>Beige</span>
+<span>Sage</span>
+<span>Champagne</span>
+</div>
+
+<div class="dress-text">
+Elegant · Soft · Romantic
+</div>
+
+</div>
+
+</section>
+
+<section class="section rsvp" id="rsvp">
+
+<div class="wrap">
+
+<div class="center reveal">
+
+<div class="kicker">
+RSVP
+</div>
+
+<h2>
+Сизди күтөбүз
+</h2>
+
+<div class="ornament">
+— ✦ —
+</div>
+
+<p class="intro">
+Келериңизди алдын ала билдирип коюңуз.
+Сиздин катышууңуз биз үчүн абдан маанилүү. 🤍
+</p>
+
+</div>
+
+<div class="rsvp-box reveal">
+
+<form id="rsvpForm">
+
+<div class="field">
+
+<label>
+Атыңыз
+</label>
+
+<input
+type="text"
+name="name"
+placeholder="Атыңызды жазыңыз"
+required>
+
+</div>
+
+<div class="field">
+
+<label>
+Катышууңуз
+</label>
+
+<div class="choices">
+
+<label class="choice">
+
+<input
+type="radio"
+name="attendance"
+value="Ооба, сөзсүз келем"
+required>
+
+<span>
+Ооба, сөзсүз келем 🤍
+</span>
+
+</label>
+
+<label class="choice">
+
+<input
+type="radio"
+name="attendance"
+value="Тилекке каршы, келе албайм">
+
+<span>
+Тилекке каршы, келе албайм
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label>
+Канча адам келесиздер?
+</label>
+
+<input
+type="number"
+name="guests"
+min="1"
+max="10"
+value="1"
+required>
+
+</div>
+
+<button class="submit" type="submit">
+Катышууну ырастоо
+</button>
+
+</form>
+
+<div class="success" id="success">
+
+Рахмат! 🤍
+<br>
+Сизди 10-октябрда чыдамсыздык менен күтөбүз.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-names">
+Жазина &amp; Мирлан
+</div>
+
+<div class="footer-date">
+10 · 10 · 2026 · Ала-Тоо
+</div>
+
+<div class="thanks">
+Биздин сүйүү баяныбыздын өзгөчө күнүндө
+биз менен болгонуңуз үчүн рахмат.
+</div>
+
+<a href="#top" class="top">
+↑
+</a>
+
+</footer>
+
+<script>
+
+window.addEventListener("load",function(){
+
+setTimeout(function(){
+
+document.getElementById("loader").classList.add("hide");
+
+document.body.classList.remove("locked");
+
+},900);
+
+});
+
+const observer=new IntersectionObserver(function(entries){
+
+entries.forEach(function(entry){
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{threshold:.12});
+
+document.querySelectorAll(".reveal").forEach(function(el){
+
+observer.observe(el);
+
+});
+
+const weddingDate=new Date(2026,9,10,17,0,0);
+
+function updateCountdown(){
+
+const now=new Date();
+
+let diff=weddingDate-now;
+
+if(diff<=0){
+
+document.getElementById("days").textContent="00";
+document.getElementById("hours").textContent="00";
+document.getElementById("minutes").textContent="00";
+document.getElementById("seconds").textContent="00";
+
+document.querySelector(".count-note").textContent=
+"Бүгүн — биздин өзгөчө күнүбүз! 🤍";
+
+return;
+
+}
+
+const days=Math.floor(diff/86400000);
+
+diff%=86400000;
+
+const hours=Math.floor(diff/3600000);
+
+diff%=3600000;
+
+const minutes=Math.floor(diff/60000);
+
+const seconds=Math.floor((diff%60000)/1000);
+
+document.getElementById("days").textContent=String(days).padStart(2,"0");
+
+document.getElementById("hours").textContent=String(hours).padStart(2,"0");
+
+document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");
+
+document.getElementById("seconds").textContent=String(seconds).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+const form=document.getElementById("rsvpForm");
+
+const success=document.getElementById("success");
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+form.style.display="none";
+
+success.classList.add("show");
+
+});
+
+const musicBtn=document.getElementById("musicBtn");
+
+const music=document.getElementById("music");
+
+musicBtn.addEventListener("click",async function(){
+
+if(!music.querySelector("source").src){
+
+alert("Музыка кошуу үчүн HTML ичиндеги audio бөлүгүнө MP3 шилтемесин коюңуз.");
+
+return;
+
+}
+
+if(music.paused){
+
+await music.play();
+
+musicBtn.textContent="❚❚";
+
+}else{
+
+music.pause();
+
+musicBtn.textContent="♫";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
